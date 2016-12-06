@@ -145,7 +145,7 @@
 
             if(this.wrongGuessedLetters.length === 10) {
                 $(document).off('keydown');
-                $('.game-over').fadeIn();
+                $('.game-over').append('<p>Rätt ord: '+ this.correctWord +'</p>').fadeIn();
             }
         },
 
