@@ -90,12 +90,56 @@
         guessChar: function(e) {
             var self = Hangman;
 
-            var charsAllowed = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z', 'å', 'ä', 'ö'];
-            var keyPressed = e.key.toLowerCase();
+
+            // var charsAllowed = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z', 'å', 'ä', 'ö'];
+            // var keyPressed = e.key.toLowerCase();
+
+            var charsAllowed = [65, 66, 67, 68, 69, 70, 71, 72, 73, 74, 75, 76, 77, 78, 79, 80, 81, 82, 83, 84, 85, 86, 87, 88, 89, 90, 219, 222, 186];
+            var keyPressed = e.originalEvent.keyCode;
+
+            var letterPressed = self.parseKey(keyPressed);
 
             // If the pressed key is not in the array below will return -1 (it is not allowed)
             if( charsAllowed.indexOf(keyPressed) !== -1 ) {
-                self.checkChar(keyPressed);
+                self.checkChar(letterPressed);
+            }
+        },
+
+        // ----------------------------------------
+        // Parse keyCode to letter
+        // ----------------------------------------
+        parseKey: function(keyCode) {
+            switch(keyCode) {
+                case 65: return 'a'; break;
+                case 66: return 'b'; break;
+                case 67: return 'c'; break;
+                case 68: return 'd'; break;
+                case 69: return 'e'; break;
+                case 70: return 'f'; break;
+                case 71: return 'g'; break;
+                case 72: return 'h'; break;
+                case 73: return 'i'; break;
+                case 74: return 'j'; break;
+                case 75: return 'k'; break;
+                case 76: return 'l'; break;
+                case 77: return 'm'; break;
+                case 78: return 'n'; break;
+                case 79: return 'o'; break;
+                case 80: return 'p'; break;
+                case 81: return 'q'; break;
+                case 82: return 'r'; break;
+                case 83: return 's'; break;
+                case 84: return 't'; break;
+                case 85: return 'u'; break;
+                case 86: return 'v'; break;
+                case 87: return 'w'; break;
+                case 88: return 'x'; break;
+                case 89: return 'y'; break;
+                case 90: return 'z'; break;
+                case 219: return 'å'; break;
+                case 222: return 'ä'; break;
+                case 186: return 'ö'; break;
+                default: return;
             }
         },
 
@@ -158,4 +202,8 @@
     }
 
     Hangman.init();
+
+    // $(document).on('keydown', function(e) {
+    //     console.log( e.key, e.keyCode );
+    // });
 })(jQuery);
