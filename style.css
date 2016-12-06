@@ -1,0 +1,185 @@
+#hangman * {
+    box-sizing: border-box;
+}
+#hangman {
+    font: 20px Monospace;
+    border: 1px solid black;
+    width: 50%;
+    padding: 10px;
+    position: relative;
+}
+#hangman > h1 {
+    margin: 0;
+    text-decoration: underline;
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+#hangman .char {
+    border-bottom: 3px solid black;
+    padding: 5px;
+    margin: 5px;
+    font-size: 2em;
+    text-transform: uppercase;
+}
+
+#hangman .hidden {
+    display: none;
+}
+
+#hangman .game-over,
+#hangman .game-won {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 200;
+    text-align: center;
+    color: #f0f0f0;
+    font-size: 2em;
+}
+#hangman .game-over { background-color: rgba(0, 0, 0, .8); }
+#hangman .game-won { background-color: rgba(117, 200, 117, .9); }
+
+
+    #hangman .game-over button,
+    #hangman .game-won button {
+        margin-top: 20px;
+        font-size: 1em;
+        padding: 20px;
+        cursor: pointer;
+        border-radius: 20px;
+        border: 1px solid #eee;
+        background: white;
+
+    }
+        #hangman .game-over button:hover,
+        #hangman .game-won button:hover {
+            background: #f0f0f0;
+        }
+
+#hangman .wrong-wrap {
+    border: 1px solid #bebebe;
+    width: 100%;
+    height: 300px;
+    position: relative;
+}
+
+#hangman .wrong-letters span {
+    text-transform: uppercase;
+    font-size: 2em;
+    position: relative;
+    margin: 0 3px;
+    color: #666;
+}
+
+#hangman .wrong-letters span:after {
+    content: '';
+    position: absolute;
+    bottom: 50%;
+    left: -8px;
+    width: 150%;
+    border: 1px solid red;
+    transform: rotate(-45deg);
+}
+
+#hangman .wrong1 {
+    width: 200px;
+    height: 60px;
+    border-radius: 50% / 100%;
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;;
+    border: 2px solid black;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    background: #e3e3e3;
+}
+
+#hangman .wrong2 {
+    border: 2px solid black;
+    border-width: 2px 2px 0 2px;
+    background: #e3e3e3;
+    position: absolute;
+    width: 10px;
+    height: 60%;
+    bottom: 20%;
+    left: 95px;
+}
+
+#hangman .wrong3 {
+    border: 2px solid black;
+    border-width: 2px 2px 2px 0;
+    background: #e3e3e3;
+    position: absolute;
+    width: 160px;
+    height: 10px;
+    bottom: 229px;
+    left: 105px;
+}
+
+#hangman .wrong4 {
+    border: 2px solid black;
+    border-width: 0 2px 2px 2px;
+    background: #e3e3e3;
+    position: absolute;
+    width: 10px;
+    height: 30px;
+    bottom: 199px;
+    left: 255px;
+}
+
+#hangman .wrong5 {
+    border: 2px solid black;
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    bottom: 161px;
+    left: 240px;
+}
+#hangman .wrong6 {
+    border: 1px solid black;
+    position: absolute;
+    width: 0px;
+    height: 60px;
+    bottom: 101px;
+    left: 258px;
+}
+#hangman .wrong7 {
+    border: 1px solid black;
+    position: absolute;
+    width: 40px;
+    height: 0;
+    bottom: 145px;
+    left: 220px;
+    transform: rotate(25deg);
+}
+#hangman .wrong8 {
+    border: 1px solid black;
+    position: absolute;
+    width: 40px;
+    height: 0;
+    bottom: 145px;
+    left: 258px;
+    transform: rotate(-25deg);
+}
+#hangman .wrong9 {
+    border: 1px solid black;
+    position: absolute;
+    width: 40px;
+    height: 0;
+    bottom: 85px;
+    left: 226px;
+    transform: rotate(-50deg);
+}
+#hangman .wrong10 {
+    border: 1px solid black;
+    position: absolute;
+    width: 40px;
+    height: 0;
+    bottom: 85px;
+    left: 252px;
+    transform: rotate(50deg);
+}

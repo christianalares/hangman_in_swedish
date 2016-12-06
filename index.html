@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Hangman</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="hangman">
+        <h1>Hänga Gubbe!</h1>
+        <p class="word"></p>
+
+        <p class="wrong-letters"></p>
+
+
+        <div class="wrong-wrap">
+            <div class="hidden wrong1"></div>
+            <div class="hidden wrong2"></div>
+            <div class="hidden wrong3"></div>
+            <div class="hidden wrong4"></div>
+            <div class="hidden wrong5"></div>
+            <div class="hidden wrong6"></div>
+            <div class="hidden wrong7"></div>
+            <div class="hidden wrong8"></div>
+            <div class="hidden wrong9"></div>
+            <div class="hidden wrong10"></div>
+        </div>
+        <div class="hidden game-over">
+            <h1>GAME OVER!</h1>
+            <button>Spela igen!</button>
+        </div>
+
+        <div class="hidden game-won">
+            <h1>DU VANN!</h1>
+            <button>Spela igen!</button>
+        </div>
+    </div>
+
+    <script type="text/javascript" src="http://code.jquery.com/jquery-3.1.1.min.js"></script>
+    <script type="text/javascript" src="script.js"></script>
+</body>
+</html>
