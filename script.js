@@ -11,6 +11,7 @@
 
             // Set the array of availible words
             self.fetchWords(function() {
+
                 // Choose a random word from that array
                 self.chooseWord();
 
@@ -19,6 +20,7 @@
 
                 // Render the "_ _ _ _"-word on the page
                 self.renderWord();
+
             });
         },
 
@@ -46,20 +48,16 @@
         // ----------------------------------------
         fetchWords: function(cb) {
             var self = this;
-            // this.words = ['TEST', 'HEJSAN', 'CHOKLADBOLL', 'SVEJ'];
-            // this.words = ['HEJE'];
+
 
             $.ajax({
-                url: 'words.txt',
+                url: 'words.php',
                 success: function(data) {
                     self.words = data.split('\n');
                 }
             }).done(function() {
                 cb.call();
             });
-
-            // self.words = ['TJENA', 'HEJ'];
-            // console.log( self.words );
 
         },
 

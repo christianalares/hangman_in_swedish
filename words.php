@@ -1,4 +1,9 @@
-ARM
+<?php
+if( !isset($_SERVER['HTTP_REFERER']) ) {
+    echo "CHEATER!!!!";
+    exit();
+}
+echo "ARM
 BADRUM
 BALKONG
 BIL
@@ -133,4 +138,5 @@ FIKON
 FLINTASTEK
 STÄDA
 OREDA
-PILLESNOPP
+PILLESNOPP";
+?>
